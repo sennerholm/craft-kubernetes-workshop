@@ -31,44 +31,9 @@ In this section you will create a Google Compute Engine (GCE) account. GCE will 
 Login into your Cloud Shell environment and clone this repository.
 
 ```
-git clone https://github.com/kelseyhightower/craft-kubernetes-workshop.git
+git clone https://github.com/sennerholm/craft-kubernetes-workshop.git
 ```
 
-## Provision a Kubernetes cluster from scratch
-
-Kubernetes is a distributed system composed of a collection of microservices. Like any system Kubernetes must be installed and configured. In this section you will install Kubernetes from the ground up with the minimal configuration required to get a cluster up and running.
-
-### Core Infrastructure
-
-A Kubernetes cluster requires compute resources which can come from VMs or bare-metal machines, a container runtime environment such as Docker, and assumes the Kubernetes network model is in place.
-
-#### Labs
-
-  * [Provision Ubuntu on GCE](labs/provisioning-ubuntu-on-gce.md)
-  * [Install and configure Docker](labs/install-and-configure-docker.md)
-  * [Configure Networking](labs/configure-networking.md)
-
-### Provision the Kubernetes Controller
-
-Kubernetes can be broken up into two parts: the controller and worker nodes. The Kubernetes controller is where all cluster configuration is stored and is home to the Kubernetes API, Controller Manager, and Scheduler.
-
-#### Labs
-
-  * [Install and configure etcd](labs/install-and-configure-etcd.md)
-  * [Download a Kubernetes release](labs/download-a-kubernetes-release.md)
-  * [Install and configure the API Server](labs/install-and-configure-apiserver.md)
-  * [Install and configure the Controller Manager](labs/install-and-configure-controller-manager.md)
-  * [Install and configure the Scheduler](labs/install-and-configure-scheduler.md)
-
-### Provision the Worker Nodes
-
-Kubernetes worker nodes are responsible for running containers (inside of pods), service loadbalancing, and reporting status information and metrics for nodes and pods. In this section you will setup the Kubernetes worker nodes and install the following components:
-
-* kubelet
-
-#### Labs
-
-  * [Install and configure the kubelet](labs/install-and-configure-kubelet.md)
 
 ## Provision Kubernetes using GKE
 
@@ -95,6 +60,7 @@ Kubernetes is all about applications and in this section you will utilize the Ku
   * [Creating and managing services](labs/creating-and-managing-services.md)
   * [Creating and managing deployments](labs/creating-and-managing-deployments.md)
   * [Rolling out updates](labs/rolling-out-updates.md)
+  * [Storage](labs/creating-and-managing-storage.md)
 
 ## Links
 
