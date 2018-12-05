@@ -60,21 +60,6 @@ kubectl port-forward monolith 10080:80
 curl http://127.0.0.1:10080
 ```
 
-```
-curl http://127.0.0.1:10080/secure
-```
-
-```
-curl -u user http://127.0.0.1:10080/login
-```
-
-> Type "password" at the prompt.
-
-```
-curl -H "Authorization: Bearer <token>" http://127.0.0.1:10080/secure
-```
-
-> Use the JWT token from the previous login.
 
 ## Exercise: View the logs of a Pod
 
