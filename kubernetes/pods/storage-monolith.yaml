@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: monolith
-      image: pdocreg1u.ppm.nu/kelseyhightower/monolith:1.0.0
+      image: kelseyhightower/monolith:1.0.0
       args:
         - "-http=0.0.0.0:8080"
         - "-health=0.0.0.0:8081"
