@@ -21,6 +21,19 @@ Create the monolith service using kubectl:
 kubectl create -f services/monolith.yaml
 ```
 
+## Exercise: Interact with the Monolith Serviec
+
+Beceause we can't reach the service externaly at the moment we start a curl container to run from.
+
+
+```
+kubectl create -f pods/curl.yaml
+kubectl exec curl --stdin --tty /bin/sh 
+curl -k https://monolith
+```
+
+## Exercise: Interact with the Monolith Service externaly
+
 Use the `gcloud compute firewall-rules` command to allow traffic to the `monolith` service:
 
 ```
