@@ -36,6 +36,11 @@ kubectl get replicasets
 ```
 
 ```
+kubectl rollout status deployment auth -w
+```
+
+
+```
 kubectl rollout history deployment auth
 ```
 
