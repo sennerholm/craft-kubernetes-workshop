@@ -31,28 +31,6 @@ kubectl create -f pods/curl.yaml
 kubectl exec curl --stdin --tty /bin/sh 
 curl -k https://monolith
 ```
-
-## Exercise: Interact with the Monolith Service externaly
-
-Use the `gcloud compute firewall-rules` command to allow traffic to the `monolith` service:
-
-```
-gcloud compute firewall-rules create allow-monolith-nodeport \
-  --allow=tcp:31000
-```
-
-## Exercise: Interact with the Monolith Service Remotely
-
-### Hints
-
-```
-gcloud compute instances list
-```
-
-```
-curl -k https://<EXTERNAL_IP>:31000
-```
-
 ### Quiz
 
 * Why are you unable to get a response from the `monolith` service?
@@ -108,13 +86,7 @@ kubectl describe services monolith
 
 ### Hints
 
-```
-gcloud compute instances list
-```
-
-```
-curl -k https://<EXTERNAL_IP>:31000
-```
+Curl above
 
 ## Tutorial: Remove Labels from Pods
 
