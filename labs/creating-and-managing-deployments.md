@@ -100,13 +100,18 @@ kubectl apply -f deployments/frontend.yaml
 ## Exercise: Interact with the Frontend Service
 
 ### Hints
+Change ingress/template-ingress.yaml and
 
 ```
-kubectl get services frontend
+kubectl create -f ingress/template-ingress.yaml
+```
+```
+kubectl describe ingress frontend
 ```
 
+
 ```
-curl -k https://<EXTERNAL-IP>
+curl -k https://frontend.<yournamespace>.development.az.nxsas.com
 ```
 
 ## Summary
