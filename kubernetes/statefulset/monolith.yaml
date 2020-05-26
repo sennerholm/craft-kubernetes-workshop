@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    app: monolith
+  name: statemono
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monolith
+  serviceName: statemono
+  template:
+    metadata:
+      labels:
+        app: monolith
+    spec:
+      containers:
+        - image: kelseyhightower/monolith:1.0.0
+          imagePullPolicy: Always
+          name: myapp
+          resources:
+            requests:
+              cpu: 100m
+              memory: 200Mi
+          volumeMounts:
+            - name: persisted-log-volume
+              mountPath: /var/log/myapp
+          env:
+            - name: APPNAME
+              value: myapp
+            - name: LOG_PATH
+              value: /var/log/myapp
+  volumeClaimTemplates:
+  - metadata:
+      name: persisted-log-volume
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 100Mi
