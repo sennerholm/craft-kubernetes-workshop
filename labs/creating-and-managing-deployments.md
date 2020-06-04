@@ -100,10 +100,10 @@ kubectl apply -f deployments/frontend.yaml
 ## Exercise: Interact with the Frontend Service
 
 ### Hints
-Change ingress/template-ingress.yaml and
+Copy  ingress/template-ingress.yaml to ingress/frontend.yaml and change the <yournamespace> to your namespace
 
 ```
-kubectl create -f ingress/template-ingress.yaml
+kubectl create -f ingress/frontend.yaml
 ```
 ```
 kubectl describe ingress frontend
