@@ -105,14 +105,19 @@ Copy 'ingress/ingress-template.yaml' to 'ingress/frontend.yaml' and change the '
 ```
 kubectl create -f ingress/frontend.yaml
 ```
+Check what ingress you have.
 ```
+kubectl describe ingress
 kubectl describe ingress frontend
 ```
-
+Did you see something strange?
 
 ```
-curl -k https://frontend.<yournamespace>.development.az.nxsas.com
+curl -v https://frontend.<yournamespace>.development.az.nxsas.com
 ```
+### Bonus lab
+This setup is using Traefik as an ingress controller, and by default the traffik is open for all clients. Add a traefik whitelist to restrict the traffic to only your ip.
+Hints in files in ingress directory and https://docs.traefik.io/middlewares/ipwhitelist/
 
 ## Summary
 
