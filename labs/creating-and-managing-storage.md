@@ -1,4 +1,4 @@
-# Creating and managing pstorage
+# Creating and managing storage
 
 Storageclaims are the easiest to get some persistent storage to attach to pods wish survives deletion and upgrades of the pod. In this lab you will learn how to:
 
@@ -72,4 +72,7 @@ ls /var/tmp/storage
 ### Hints
 
 The `kubectl delete` command is used to remove a pod, `kubectl delete -f file.yaml` deletes all file defined in file.yaml
+
+## Bonus lab: 
+Checkout the statefulset directory, what happens when you create? How does it handle scale out? What do you think is the usecase for it?
 
