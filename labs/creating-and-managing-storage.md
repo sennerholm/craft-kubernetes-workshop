@@ -63,7 +63,6 @@ Use the `kubectl exec` command to run an interactive shell inside the `monolith`
 
 ```
 kubectl exec storage-monolith --stdin --tty -c monolith -- /bin/sh
-df /var/tmp/storage
 touch /var/tmp/storage/from_first_instance
 ls /var/tmp/storage
 ```
