@@ -28,7 +28,7 @@ Beceause we can't reach the service externaly at the moment we start a curl cont
 
 ```
 kubectl create -f pods/curl.yaml
-kubectl exec curl --stdin --tty /bin/sh 
+kubectl exec curl --stdin --tty -- /bin/sh 
 curl -k https://monolith
 ```
 ### Quiz
