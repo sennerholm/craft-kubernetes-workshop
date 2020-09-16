@@ -1,0 +1,9 @@
+# Whitelisting Based on `X-Forwarded-For` with `depth=2`
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: testipwhitelist
+spec:
+  ipWhiteList:
+    sourceRange:
+      - 158.174.201.3/32

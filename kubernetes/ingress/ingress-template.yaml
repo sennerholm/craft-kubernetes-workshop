@@ -6,6 +6,8 @@ metadata:
     ingress.kubernetes.io/protocol: https
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/service.serversscheme: https
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+#    traefik.ingress.kubernetes.io/router.middlewares: <mynamespace>-testipwhitelist@kubernetescrd
   name: frontend
 spec:
   rules:
