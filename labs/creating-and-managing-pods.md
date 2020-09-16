@@ -76,5 +76,5 @@ kubectl logs monolith
 Use the `kubectl exec` command to run an interactive shell inside the `monolith` Pod:
 
 ```
-kubectl exec monolith --stdin --tty -c monolith /bin/sh
+kubectl exec monolith --stdin --tty -c monolith -- /bin/sh
 ```
