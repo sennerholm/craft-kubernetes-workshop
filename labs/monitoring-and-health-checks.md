@@ -56,7 +56,7 @@ kubectl port-forward healthy-monolith 10081:81
 
 ### Experiment with Readiness Probes
 
-Force the `monolith` container readiness probe to fail. Use the `curl` command to toggle the readiness probe status:
+Force the `monolith` container readiness probe to fail. Use the `curl` command to toggle the readiness status of the application:
 
 ```
 curl http://127.0.0.1:10081/readiness/status
